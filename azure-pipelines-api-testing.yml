@@ -21,3 +21,12 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'clean test -Dcucumber.filter.tags=@ApiRest'
   displayName: Running integration test
+
+- task: PublishCucumberReport@1
+  inputs:
+    jsonDir: 'target/cucumber-reports/json-reports'
+    outputPath: 'target/cucumber-reports/json-reports'
+    theme: 'bootstrap'
+    reportSuiteAsScenarios: true
+    name: 'Integration-Test-Report'
+    title: 'Integration-Test-Report'
