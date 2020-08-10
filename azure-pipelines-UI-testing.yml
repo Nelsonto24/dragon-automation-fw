@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'WM_Agent_Pool'
+  vmImage: 'WMAgentPool'
 
 steps:
 - task: Maven@3
